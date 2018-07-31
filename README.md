@@ -1,8 +1,8 @@
 # Zephyr BioModule Bluetooth Connection - Tutorial
 
 **Files needed:**
-desktop_parser: csv_creator.py, util.py, main_parser.py, zephyr(folder with util + protocol)
-raspberry_pi_collector: bluetooth_collector_pi.py, filename_index.txt
+* desktop_parser: csv_creator.py, util.py, main_parser.py, zephyr(folder with util + protocol)
+* raspberry_pi_collector: bluetooth_collector_pi.py, filename_index.txt
 
 **Standard instructions to collect data via Bluetooth on the Raspberry Pi:**
  1. Open the ‘bluetooth_collector_pi’ program in a folder on the Raspberry Pi 3. 
@@ -118,6 +118,9 @@ This ends the connection with the BioModule.
 
 main()
 Compiles all of the above code together with examples for the MAC address and the data type. There may be code commented out from attempts to fix a disconnection problem for longer periods of collection, but this depends on the finalized example of the code. 
+
+Unsolved Issues
+Problem with the connection between the Raspberry Pi and the BioModule for long periods of time - unknown cause, but leftover implimentation to fix can be seen in bluetooth_collector_pi in the main function. 
 
 Contact Information of Creator:
 Patrick Gorman, Biomedical Engineering at UNC/NCSU
