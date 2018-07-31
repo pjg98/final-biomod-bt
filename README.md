@@ -1,10 +1,10 @@
 # Zephyr BioModule Bluetooth Connection - Tutorial
 
-** Files needed: **
+**Files needed:**
 desktop_parser: csv_creator.py, util.py, main_parser.py, zephyr(folder with util + protocol)
 raspberry_pi_collector: bluetooth_collector_pi.py, filename_index.txt
 
-** Standard instructions to collect data via Bluetooth on the Raspberry Pi: **
+**Standard instructions to collect data via Bluetooth on the Raspberry Pi:**
  1. Open the ‘bluetooth_collector_pi’ program in a folder on the Raspberry Pi 3. 
  2. Change the MAC address, file index number, and data type variables. 
   a. The MAC address is for the specific BioModule being collected from. Find this through the config tool while the BioModule is plugged in. 
@@ -15,7 +15,7 @@ raspberry_pi_collector: bluetooth_collector_pi.py, filename_index.txt
     ‘python3 bluetooth_collector_pi.py’
  4. Once complete, the file will be saved in the same directory as the program as ‘zephyr_packe_file##’ where ## is the file index. 
 
-** Standard instructions to parse the data file from the Raspberry Pi on another computer:
+**Standard instructions to parse the data file from the Raspberry Pi on another computer:**
 Have the three files in the same folder: ‘util’, ‘csv_creator’, and ‘main_parser’
 ‘util’ and ‘csv_creator’ are reference files for ‘main_parser’, which is the only file to be altered. 
 Input/change the code of the ‘file_to_parse’ and ‘data_type’ variables. 
