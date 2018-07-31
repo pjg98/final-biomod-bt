@@ -128,6 +128,7 @@ Most likely to respond through UNC email.
 
 School email (anticipated to be good through Summer 2020): 
 pjg98@live.unc.edu / pjgorman@ncsu.edu
+
 Long term email: patrickjgorman@hotmail.com
 
 There is an additional proprietary document that will not be included with this information and code, which contains the full bluetooth protocol for the Zephyr BioModule.
