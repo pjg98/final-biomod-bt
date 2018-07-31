@@ -1,21 +1,21 @@
-#Zephyr BioModule Bluetooth Connection - Tutorial
+# Zephyr BioModule Bluetooth Connection - Tutorial
 
-Files needed:
+** Files needed: **
 desktop_parser: csv_creator.py, util.py, main_parser.py, zephyr(folder with util + protocol)
 raspberry_pi_collector: bluetooth_collector_pi.py, filename_index.txt
 
-Standard instructions to collect data via Bluetooth on the Raspberry Pi:
-Open the ‘bluetooth_collector_pi’ program in a folder on the Raspberry Pi 3. 
-Change the MAC address, file index number, and data type variables. 
-The MAC address is for the specific BioModule being collected from. Find this through the config tool while the BioModule is plugged in. 
-The file index number changes the file number that the current recording session will be saved under. This can be changed in the ‘filename_index.txt’ file, and will increment by one after every trial, via the ‘get_filename_index’ function.
-The data type variable can be ‘ECG’, ‘RES’, ‘ACC’, or ‘BOTH’, written as a string. ‘BOTH’ will record both ECG and RES data and store them on the file. Whatever data is recorded will be the only data recorded. 
-Run the ‘main’ function in the ‘bluetooth_collector_pi’ program using Python3. The Raspberry Pi defaults to Python2, but Python3 is required. This should happen automatically when the bluetooth collector program is run.
-In a terminal, navigate to the appropriate directory and:
- ‘python3 bluetooth_collector_pi.py’
-Once complete, the file will be saved in the same directory as the program as ‘zephyr_packe_file##’ where ## is the file index. 
+** Standard instructions to collect data via Bluetooth on the Raspberry Pi: **
+ 1. Open the ‘bluetooth_collector_pi’ program in a folder on the Raspberry Pi 3. 
+ 2. Change the MAC address, file index number, and data type variables. 
+  a. The MAC address is for the specific BioModule being collected from. Find this through the config tool while the BioModule is plugged in. 
+  b. The file index number changes the file number that the current recording session will be saved under. This can be changed in the ‘filename_index.txt’ file, and will increment by one after every trial, via the ‘get_filename_index’ function.
+  c.The data type variable can be ‘ECG’, ‘RES’, ‘ACC’, or ‘BOTH’, written as a string. ‘BOTH’ will record both ECG and RES data and store them on the file. Whatever data is recorded will be the only data recorded. 
+ 3. Run the ‘main’ function in the ‘bluetooth_collector_pi’ program using Python3. The Raspberry Pi defaults to Python2, but Python3 is required. This should happen automatically when the bluetooth collector program is run.
+  a. In a terminal, navigate to the appropriate directory and:
+    ‘python3 bluetooth_collector_pi.py’
+ 4. Once complete, the file will be saved in the same directory as the program as ‘zephyr_packe_file##’ where ## is the file index. 
 
-Standard instructions to parse the data file from the Raspberry Pi on another computer:
+** Standard instructions to parse the data file from the Raspberry Pi on another computer:
 Have the three files in the same folder: ‘util’, ‘csv_creator’, and ‘main_parser’
 ‘util’ and ‘csv_creator’ are reference files for ‘main_parser’, which is the only file to be altered. 
 Input/change the code of the ‘file_to_parse’ and ‘data_type’ variables. 
