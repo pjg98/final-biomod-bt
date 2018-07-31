@@ -8,7 +8,6 @@ raspberry_pi_collector: bluetooth_collector_pi.py, filename_index.txt
  1. Open the ‘bluetooth_collector_pi’ program in a folder on the Raspberry Pi 3. 
  2. Change the MAC address, file index number, and data type variables.
   a. The MAC address is for the specific BioModule being collected from. Find this through the config tool while the BioModule is plugged in.
-  
   b. The file index number changes the file number that the current recording session will be saved under. This can be changed in the ‘filename_index.txt’ file, and will increment by one after every trial, via the ‘get_filename_index’ function.
   c.The data type variable can be ‘ECG’, ‘RES’, ‘ACC’, or ‘BOTH’, written as a string. ‘BOTH’ will record both ECG and RES data and store them on the file. Whatever data is recorded will be the only data recorded. 
   
