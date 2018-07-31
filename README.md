@@ -18,23 +18,23 @@
  4. Once complete, the file will be saved in the same directory as the program as ‘zephyr_packe_file##’ where ## is the file index. 
 
 **Standard instructions to parse the data file from the Raspberry Pi on another computer:**
-Have the three files in the same folder: ‘util’, ‘csv_creator’, and ‘main_parser’
-‘util’ and ‘csv_creator’ are reference files for ‘main_parser’, which is the only file to be altered. 
-Input/change the code of the ‘file_to_parse’ and ‘data_type’ variables. 
-‘file_to_parse’ is the full name of the file, which is in the same directory as all this program. There should be an example file name, which would be replaced. 
-‘data_type’ indicates the kind of data that you want from the file (‘ECG’, ‘RES’, ‘BOTH’, ‘ACC’). Indicate the type of data to retrieve here. 
-Run ‘main_parser’ with Python3, which will be complete once the ‘Time taken: …’ is printed. The version of Python used when developing this program was 3.6.
-The .csv files will be in the same directory as the program files. 
-These will overwritten/appended to if they are not removed between files. 
-
-Organization of the .dat file and Bluetooth packets
+ 1. Have the three files in the same folder: ‘util’, ‘csv_creator’, and ‘main_parser’
+ 2. ‘util’ and ‘csv_creator’ are reference files for ‘main_parser’, which is the only file to be altered. 
+ 3. Input/change the code of the ‘file_to_parse’ and ‘data_type’ variables. 
+* ‘file_to_parse’ is the full name of the file, which is in the same directory as all this program. There should be an example file name, which would be replaced. 
+* ‘data_type’ indicates the kind of data that you want from the file (‘ECG’, ‘RES’, ‘BOTH’, ‘ACC’). Indicate the type of data to retrieve here. 
+ 4. Run ‘main_parser’ with Python3, which will be complete once the ‘Time taken: …’ is printed. The version of Python used when developing this program was 3.6.
+ 5. The .csv files will be in the same directory as the program files. 
+* These will overwritten/appended to if they are not removed between files. 
+
+**Organization of the .dat file and Bluetooth packets**
 The .dat file is a list of hexadecimal-string, where each line is an individual packet. Each packet starts with 02, indicating the start of the message, then has the message ID (i.e. 21, 22, 23, etc.), then the length of the payload, the payload, and the end of the message as an 03. 
 
 The payload contains a sequence number, the timestamp, and the set of encoded samples. The sequence number increments for each packet, to maintain the order of the packets (no kind of error system is implemented in this code, though). The timestamp separately stores the year, month, day, and milliseconds for the h/m/s/ms. 
 
 For the ECG and RES sample sets, each individual sample is stored as a 10-bit binary number which are stored in a set of five bytes (5 bytes = 40 bits = 4 samples). The program is written, using the proprietary document as a guide, to pull out the samples in the sample set and save them to a csv file. 
 
-Program Function Explanations:
+**Program Function Explanations:**
 
 util.py contains tools for the .dat file parser and csv file creator
 
