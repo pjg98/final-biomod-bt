@@ -38,7 +38,7 @@ For the ECG and RES sample sets, each individual sample is stored as a 10-bit bi
 
 util.py contains tools for the .dat file parser and csv file creator
 
-payload_retv()
+payload_retv() 
 This function takes a .dat file and pulls each packet’s payload if the packet is for the specified data type. 
 Since each bluetooth packet is on its own line, the function goes through the whole file, checks the message ID for each packet to see if it is the desired type, then pulls the payload to be parsed.
 Returns a list of payload, in order, containing the sequence number, timestamp, and the set of samples. 
