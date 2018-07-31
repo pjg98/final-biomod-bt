@@ -1,4 +1,4 @@
-###Zephyr BioModule Bluetooth Connection - Tutorial###
+#Zephyr BioModule Bluetooth Connection - Tutorial
 
 Files needed:
 desktop_parser: csv_creator.py, util.py, main_parser.py, zephyr(folder with util + protocol)
