@@ -1,8 +1,10 @@
 # Zephyr BioModule Bluetooth Connection - Tutorial
 
 **Files needed:**
-* desktop_parser: csv_creator.py, util.py, main_parser.py, zephyr(folder with util + protocol)
-* raspberry_pi_collector: bluetooth_collector_pi.py, filename_index.txt
+* desktop_parser: csv_creator.py, util.py, main_parser.py
+* raspberry_pi_collector: bluetooth_collector_pi.py, filename_index.txt, zephyr(folder with util + protocol)
+
+-Note: The zephyr folder in the raspberry_pi_collector is from a separate repository cited below. It is just used for the initialization messages to the BioModule.
 
 **Standard instructions to collect data via Bluetooth on the Raspberry Pi:**
  1. Open the ‘bluetooth_collector_pi’ program in a folder on the Raspberry Pi 3. 
